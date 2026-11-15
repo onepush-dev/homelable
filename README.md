@@ -2,7 +2,7 @@
 
 [Homelable](https://github.com/Pouzor/homelable) (by Pouzor, MIT) — draw and document your homelab: an interactive canvas of hosts, VMs, containers and links, with racks, floor plans, documentation, live status, and imports from Proxmox, Unraid and Zigbee2MQTT. Deploy on Railway with one click.
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/TEMPLATE_CODE)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/F0P1tC)
 
 ## What this template runs
 
