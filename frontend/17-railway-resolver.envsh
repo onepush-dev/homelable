@@ -1,0 +1,6 @@
+#!/bin/sh
+# Use the container's own DNS server (Railway internal DNS) as nginx's resolver.
+ns=$(awk '/^nameserver/{print $2; exit}' /etc/resolv.conf)
+case "$ns" in *:*) ns="[$ns]";; "") ns="127.0.0.11";; esac
+export NGINX_LOCAL_RESOLVER="$ns"
+entrypoint_log "17-railway-resolver.envsh: nginx resolver $NGINX_LOCAL_RESOLVER, backend $BACKEND_UPSTREAM"
