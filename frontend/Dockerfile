@@ -11,6 +11,6 @@ RUN set -eu; chmod 755 /docker-entrypoint.d/17-railway-resolver.envsh; \
            -e 's#proxy_pass http://${BACKEND_UPSTREAM};#proxy_pass http://$homelable_backend;#' "$t"; \
     grep -q 'listen 8080' "$t"; grep -q 'proxy_pass http://$homelable_backend' "$t"; \
     rm -f /etc/nginx/conf.d/homelable.conf
-ENV BACKEND_UPSTREAM=backend.railway.internal:8000 \
+ENV BACKEND_UPSTREAM=backend.railway.internal:8080 \
     NGINX_ENVSUBST_FILTER='^(BACKEND_UPSTREAM|NGINX_LOCAL_RESOLVER)$'
 EXPOSE 8080

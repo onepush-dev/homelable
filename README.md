@@ -9,7 +9,7 @@
 | Service | Image | Notes |
 |---|---|---|
 | `frontend` | `ghcr.io/onepush-dev/homelable-frontend:3.7.1` | Official SPA + nginx, listening on 8080 (public domain). Proxies `/api`, `/ws`, `/docs` to the backend over the private network. |
-| `backend` | `ghcr.io/onepush-dev/homelable-backend:3.7.1` | Official FastAPI backend on `[::]:8000`, private only. Volume at `/app/data` (SQLite DB + uploads). |
+| `backend` | `ghcr.io/onepush-dev/homelable-backend:3.7.1` | Official FastAPI backend on `[::]:8080`, private only. Volume at `/app/data` (SQLite DB + uploads). |
 
 Both images are the official upstream 3.7.1 images, app unmodified, plus small Railway wrappers.
 

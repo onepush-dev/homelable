@@ -9,4 +9,4 @@ elif [ -z "${AUTH_PASSWORD_HASH:-}" ]; then
   echo "railway: set HOMELABLE_ADMIN_PASSWORD (or AUTH_PASSWORD_HASH); refusing to start with upstream's default admin/admin" >&2
   exit 1
 fi
-exec uvicorn app.main:app --host :: --port 8000 --proxy-headers --forwarded-allow-ips '*'
+exec uvicorn app.main:app --host :: --port 8080 --proxy-headers --forwarded-allow-ips '*'
