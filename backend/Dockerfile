@@ -1,5 +1,5 @@
 # Homelable backend on Railway: official ghcr.io/pouzor/homelable-backend:3.7.1 (MIT), app unmodified.
-# Adds: listen on [::]:8080 (Railway private network), SQLite on the /app/data volume,
+# Adds: listen on 8080, IPv4 + IPv6 (Railway private network + healthcheck), SQLite on the /app/data volume,
 # and a generated admin password (bcrypt-hashed at boot) instead of upstream's admin/admin default.
 FROM ghcr.io/pouzor/homelable-backend:3.7.1
 LABEL org.opencontainers.image.source="https://github.com/onepush-dev/homelable"
